@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="numberSize()"></button>
+    <button onclick="dayQuarter()"></button>
+    <div id="id1"></div>
+    <div id="id2"></div>
+
+    <script>
+        function numberSize() {
+            variable = Math.ceil(Math.random() * 6)
+            console.log(variable)
+            if (variable > 4) {
+                document.getElementById('id1').innerHTML = 'Big';
+            }
+            else if (variable > 2) {
+                document.getElementById('id1').innerHTML = 'Medium';
+            }
+            else
+                document.getElementById('id1').innerHTML = 'Small';
+        }
+        function write(whatever1) {
+            document.getElementById('id2').innerHTML = whatever1;
+        }
+        function dayQuarter() {
+            let hour = Math.ceil(Math.random() * 24)
+            console.log(hour)
+            if (hour >= 0 && hour < 8) {
+                write(`The clock is ${hour}:00 Sleep well`)
+            }
+            else if (hour >= 8 && hour < 10) {
+                write(`Good morning! The clock is ${hour}:00, get after it!`)
+            }
+            else if (hour >= 10 && hour < 16) {
+                write(`The clock is irrelevant, it's work hours is all that matters`)
+            }
+            else
+                write(`The clock is ${hour}:00 Relaxation time is Growth time!`)
+        }
+    </script>
+    <style>
+        button {
+            height: 20px;
+            width: 40px;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-area:
+                left right;
+            align-self: center;
+        }
+    </style>
+</body>
+</html>
