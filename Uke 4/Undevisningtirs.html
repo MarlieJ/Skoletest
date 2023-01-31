@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="app"> </div>
+    <script>
+        //Model 
+        let tall1 = 0;
+        let tall2 = 1;
+
+        //View 
+        updateView()
+        function updateView() {
+            let html = /*html*/`
+            <div>Tall1: ${tall1}</div>
+            <div>Tall2: ${tall2}</div>
+            <button onclick="increaseNumber()">increase tall1</button>
+            `
+            document.getElementById ('app').innerHTML = html;
+
+        }
+        
+        //Cotroller
+        function increaseNumber(){
+            tall1++;
+            updateView()
+            //tall1 = tall1 + 1;
+            //tall1 += 1;
+
+        }
+
+    </script>
+</body>
+
+</html>
