@@ -8,7 +8,10 @@
 </head>
 
 <style>
-
+.endreFarge{
+    background-color: pink;
+    
+}
 </style>
 <body>
     <button onclick="tellerminus()">tell ned</button>
@@ -16,16 +19,18 @@
     <button onclick="tellerpluss()">tell opp</button>
 
 <script>
+    let tall = document.getElementById('numberone');
+    let teller = 1;
     function tellerminus(){
         document.getElementById('numberone').innerHTML --;
     }
     function tellerpluss(){
-        document.getElementById('numberone').innerHTML ++;
+        tall.innerHTML =  teller;
+        teller ++;
+        if (teller == 5)
+            classList.add('endreFarge');
     }
-    if (numberone == 5){
-        style = background-color: pink;
-    }
-        
+    console.log(classList.endreFarge);
     
 
         

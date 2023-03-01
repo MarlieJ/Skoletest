@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.synlig{
+        padding: 50px;
+        margin: 50px;
+        border: solid black 2px;
+        border-style: dashed;
+    }
+    .color{
+        background-color: red;
+        width: auto;
+        height: auto;
+    }
+    div{
+        cursor: pointer;
+    }
+    body.lightgreen{
+        background-color: rgb(15, 244, 15);
+    }
+</style>
+<body>
+    <div onclick="pushRed('red')">RØD</div>
+    <div onclick="pushRed('green')">GRØNN</div>
+    <div onclick="pushRed('blue')">BLÅ</div>
+    <button onclick="endreHele()">Endre hele bakgrunnsfargen</button>
+    <div id="div1boks" class="synlig"></div>
+    <div class="synlig"></div>
+    
+    
+    <script>
+    let div1 = document.getElementById('div1boks');
+    let color = 
+        function pushRed(color){
+            div1.classList.add('color');
+        }
+        function endreHele(){
+            document.body.classList.toggle('lightgreen')
+        }
+        // console.log('pushRed');
+    </script>
+</body>
+</html>
